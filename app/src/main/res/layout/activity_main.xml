@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="300dip"
+        android:layout_height="300dip"
+        android:layout_marginStart="8dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginTop="8dip"
+        android:layout_marginEnd="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginBottom="210dip"
+        android:background="@drawable/ncircle"
+        android:gravity="center"
+        android:text="00:00:00:00"
+        android:textColor="#3c3c3c"
+        android:textSize="50dip"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginEnd="8dip"
+        android:layout_marginRight="8dip"
+        android:textColor="#3c3c3c"
+        android:textSize="30dip"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeText" />
+
+    <ImageView
+        android:id="@+id/dayline"
+        android:layout_width="160dip"
+        android:layout_height="1dip"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dip"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#3c3c3c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginTop="45dip"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayline">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip">
+
+            <Button
+                android:id="@+id/startbtn"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/startbuttonclicked" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/recordbtn"
+                    android:layout_width="55dip"
+                    android:layout_height="55dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/recordbuttonclicked"
+
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/pausebtn"
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/pausebuttonclicked"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/stopbtn"
+                    android:layout_width="55dip"
+                    android:layout_height="55dip"
+                    android:background="@drawable/stopbuttonclicked"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <SlidingDrawer
+
+        android:id="@+id/slidingDrawer"
+        android:layout_width="240dip"
+        android:layout_height="match_parent"
+
+
+        android:content="@+id/linearLayout3"
+        android:handle="@+id/Button3"
+        android:orientation="horizontal"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Button3"
+            android:layout_width="35dip"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:lineHeight="15dip"
+
+            android:paddingBottom="420dip"
+            android:rotation="180"
+            android:text="r\ne\nc\no\nr\nd\n·\n·\n·"
+            android:textColor="#3c3c3c"
+            android:textSize="12dip"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:orientation="vertical"
+            android:rotation="180">
+
+            <ScrollView
+                android:layout_width="205dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/recordbackground2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/recordView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="22dip" />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+    </SlidingDrawer>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
